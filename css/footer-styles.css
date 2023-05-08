@@ -1,8 +1,5 @@
 :root {
-  font-family: 'Epilogue', sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+ 
   --white-primary-color: #ffffff;
   --black-title-bg-color: #1e2827;
   --black-primary-color: #141414;
@@ -21,13 +18,18 @@
   margin: 0;
   padding: 0;
 }
-ul{
+.list{
   margin: 0;
   list-style: none;
   padding: 0;
 }
 .link {
   text-decoration: none;
+}
+body {
+  font-family: 'Epilogue', sans-serif;
+  color: var(--black-primary-color);
+  background-color: var(--grey-background-color);
 }
 
 h1,
@@ -70,7 +72,7 @@ img {
 }
 
 .container {
-  min-width: 320px;
+  min-width: 100%px;
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto;
@@ -79,7 +81,7 @@ img {
 {
   overflow: hidden;
 }
-a
+link
 {
   text-decoration: none;
 }
@@ -127,8 +129,16 @@ a
 }
 .footer-logo-icon
 {
-  fill: var(--white-primary-color);
+  fill: #ffffff;
 }
+@media screen and (min-width: 768px) {
+  .footer-logo-icon
+{
+  width: 50px;
+  height: 50px;
+}
+}
+
 .footer-info
 {
   display: flex;
