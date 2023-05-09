@@ -72,11 +72,12 @@ img {
 }
 
 .container {
-  min-width: 100%px;
+  min-width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto;
 }
+
 .no-scroll
 {
   overflow: hidden;
@@ -92,7 +93,15 @@ link
   line-height: 1.29;
   text-transform: uppercase;
   color: var(--white-primary-color); 
+  transition: color var(--transition-timing-function);
 }
+
+.footer-link-info:is(:hover, :focus)
+{
+  color: var(--grey-footer-text);
+}
+
+
 @media screen and (min-width:768px) {
   .footer-link-info
   {
@@ -113,7 +122,7 @@ link
     padding: 80px 0 20px;
   }
 }
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1280px) {
   .footer
   {
     padding: 104px 0 32px;
@@ -126,10 +135,12 @@ link
   align-items: flex-start;
   flex-direction: column;
   gap: 20px;
+  transition: transform var(--transition-timing-function);
 }
-.footer-logo-icon
+
+.footer-logo-icon:is(:hover, :focus)
 {
-  fill: #ffffff;
+  transform: rotate(30deg);
 }
 @media screen and (min-width: 768px) {
   .footer-logo-icon
@@ -163,7 +174,13 @@ link
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: var(--white-primary-color);
+  transition: color var(--transition-timing-function);
 }
+.footer-nav-link:is(:hover, :focus)
+{
+  color: var(--grey-footer-text)
+}
+
 @media screen and (min-width:768px) {
   .footer-nav-link{
     font-size: 18px;
@@ -181,7 +198,7 @@ link
     position: static;
   }
 }
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1280px) {
   .footer-nav
   {
     top:104px;
@@ -192,7 +209,6 @@ link
 {
   max-width: 1134px;
   display: block;
- 
 }
 @media screen  and (min-width:768px){
   .footer-container
@@ -257,6 +273,11 @@ link
   display: block;
   width: 100%;
   height: 100%;
+  transition: border-color var(--transition-timing-function);
+}
+.footer-soc-link:is(:hover, :focus) 
+{
+  border-color: var(--black-primary-color);
 }
 .footer-soc-icon
 {
@@ -296,14 +317,15 @@ link
   justify-content: flex-start;
   flex-direction: column;
   gap: 14px;
- 
+
 }
 @media screen and (min-width:768px) {
   .footer-privacy
   { 
-    width: 1135px;
+    width: 100%;
     justify-content: space-between;
-  flex-direction: row;
+    flex-direction: row;
+    margin: 0 auto;
   }
 }
 .footer-privacy-list {
