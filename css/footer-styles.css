@@ -72,7 +72,7 @@ img {
 }
 
 .container {
-  min-width: 100%;
+ 
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto;
@@ -189,9 +189,7 @@ link
 }
 .footer-nav
 {
-  position: absolute;
-  top: 40px;
-  right: 10%;
+
 }
 @media screen and (min-width:768px) {
   .footer-nav{
@@ -209,6 +207,16 @@ link
 {
   max-width: 1134px;
   display: block;
+}
+@media screen and (max-width: 768px) {
+  .footer-container
+  {
+    margin: 0 auto;
+    max-width: 335px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 @media screen  and (min-width:768px){
   .footer-container
